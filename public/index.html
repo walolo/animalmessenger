@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Messenger | Baby Robot WonderLand</title>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../src/favicon.svg"/>
+</head>
+<body>
+    <div id="section_1">
+      <header class='header'>
+        <div class='header_left'>
+          <a href="#section_1"><img id="logo" src="../src/logo.svg" alt="Baby Robot WonderLand"></a>
+        </div>
+        <div class="header_right">
+          <a href="https://www.instagram.com/babyrobotwl/" target="_blank"><img id="ig" src="../src/ig.svg" alt="Instagrm page"></a>
+          <a href="https://tenor.com/official/babyrobotwl" target="_blank"><img id="tenor" href="" src="../src/tenor.svg" alt="Google Tenor page"></a>
+        </div>
+      </header>
+        <img id ="name" src="../src/name.svg" alt="Animal Messenger">
+        <div id="des">Send an Animal to Deliver a Message to Friends</div>
+        <img id ="animals" src="../src/animals.svg" alt="Animals">
+        <a href="#section_2"><div id="start_btn">LET'S START!</div></a>
+    </div>
+    <div id="section_2">
+      <header class='header' style="background-color: #fafafa;">
+        <div class='header_left'>
+          <a href="/public/index.html" target="_blank"><img id="logo" src="../src/logo_1.svg" alt="Baby Robot WonderLand"></a>
+        </div>
+        <div class="header_right">
+          <a href="https://www.instagram.com/babyrobotwl/" target="_blank"><img id="ig" src="../src/ig_1.svg" alt="Instagrm page"></a>
+          <a href="https://tenor.com/official/babyrobotwl" target="_blank"><img id="tenor" href="" src="../src/tenor_1.svg" alt="Google Tenor page"></a>
+        </div>
+      </header>
+      <div class="features">
+        <div class="step_0"></div>
+        <div class="step_1">
+          <div id="step_1_title">ANIMAL</div>
+          <div id="step_1_animals">
+            <img id ="animal_1" src="../src/a_1.svg" alt="animal_1">
+            <img id ="animal_2" src="../src/a_2.svg" alt="animal_2">
+            <img id ="animal_3" src="../src/a_3.svg" alt="animal_3">
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="step_2">
+          <div id="step_2_title">ANIMATION</div>
+            <span><a id="ani_1_on">ON</a></span>
+            <span id="vertical_bar">I</span>
+            <span><a id="ani_1_off">OFF</a></span>
+        </div>          
+        <div class="line"></div>
+        <div class="step_3">
+          <div id="step_3_title">MESSAGE</div>
+          <input type="text" id="from_input" placeholder="From:"><br>
+          <br>
+          <input type="text" id="name_input" placeholder="To:"><br>
+          <br>
+          <textarea type="text" id="mes_input" placeholder="Say Something" maxlength="400"></textarea><br>
+        </div>
+        <div class="step_4">
+        </div> 
+        <br>
+        <div id="all_save_no">CREATE</div>
+        <a id="all_save">CREATE</a>
+        <a id="copy_link">COPY LINK</a>
+        <a id="send_mes" href="/public/index.html" target="_blank">SEND MESSENGER</a>
+        <span id="tooltip">Copied to Clipboard !<span>        
+      </div>
+      <div id="mes_output"></div>
+    </div>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
+    <!-- <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/jsm/controls/DragControls.js'></script> -->
+    
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>-->
+    
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDJeEgaplREld_bPCqWiiFsQ2BI3ZZQJIw",
+        authDomain: "animalmessenger-c1380.firebaseapp.com",
+        databaseURL: "https://animalmessenger-c1380.firebaseio.com",
+        projectId: "animalmessenger-c1380",
+        storageBucket: "animalmessenger-c1380.appspot.com",
+        messagingSenderId: "160903090735",
+        appId: "1:160903090735:web:898d9d93b716a62212acda",
+        measurementId: "G-TQFZ3YM4F1"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // firebase.analytics();
+      const db= firebase.firestore();
+    </script>
+    <script src="../js/three.module.js"></script>        
+    <script src="../js/DragControls.js"></script>      
+    <script src="../js/main.js"></script>
+</body>
+</html>
